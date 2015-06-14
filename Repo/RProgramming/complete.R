@@ -11,7 +11,7 @@ complete <- function(directory, id = 1:332) {
     
     ##declares holding variables for all ids & counts
     ids <- vector()
-    counts = vector()
+    count = vector()
     
     ##loops through numbers 1 to 332 (range of id)
     for(i in id) {
@@ -25,11 +25,11 @@ complete <- function(directory, id = 1:332) {
       ids = c(ids, i)
       ##uses the complete.cases tool that assesses only observations that have
       ##no missing values across the entire sequence (row)
-      completeCase = data[complete.cases(data),]
+      numofobs = data[complete.cases(data),]
       ##counts the number of complete cases
-      counts = c(counts, nrow(completeCase))
+      count = c(count, nrow(numofobs))
     }
-    ##returns the IDs of the csvs and the counts
-    dt <- data.frame(id=ids, nobs=counts)
+    ##returns the IDs of the csvs and the count
+    dt <- data.frame(id=ids, nobs=count)
     dt
 }

@@ -27,7 +27,7 @@ complete <- function(directory, id = 1:332) {
       ##no missing values across the entire sequence (row)
       completeCase = data[complete.cases(data),]
       ##counts the number of complete cases
-      counts = c(counts, nrow(completeCases))
+      counts = c(counts, nrow(completeCase))
     }
     ##returns the IDs of the csvs and the counts
     dt <- data.frame(id=ids, nobs=counts)

@@ -32,5 +32,5 @@ corr <- function(directory, threshold = 0){
                 }
         }
         
-        round(correlation, 5)
+        correlations
 }

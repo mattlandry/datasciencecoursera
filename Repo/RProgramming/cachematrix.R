@@ -72,5 +72,6 @@ cacheSolve <- function(x, ...) {
         m <- solve(data) %*% data
         ##Put the new inverse to the object
         x$setmean(m)
+        ##return the new matrix
         m
 }
